@@ -3,7 +3,8 @@
 // 2. invertire l'ordine delle lettere 
 // 3. concatenare le lettere invertite per creare una parola
 // 4. confronare le due parole per capire se sono uguali
-const word = prompt("inserisci una parola");
+
+// FUNCTIONS
 function palindrome(wordToCheck){
     let invertedWord ="";
     for (let i = wordToCheck.length-1; i >= 0; i--) {
@@ -15,6 +16,9 @@ function palindrome(wordToCheck){
         return false;
     }
 }
+
+// MAIN  
+const word = prompt("inserisci una parola");
 if(palindrome(word)===true){
     alert("La parola che hai inserito è un palindromo!");
 }else{
