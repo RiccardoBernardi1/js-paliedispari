@@ -20,11 +20,12 @@ function evenOrOdd(num){
 // MAIN  
 let userChoice=prompt("Scegli tra pari o dispari");
 console.log(userChoice)
-while (userChoice != "pari" || userChoice != "dispari"){
+while (userChoice != "pari" && userChoice != "dispari"){
     alert("Devi inserire una parola che sia 'pari' o 'dispari'");
     userChoice=prompt("Scegli tra pari o dispari");
     console.log(userChoice)
 }
+console.log(userChoice)
 let userNumber=Number(prompt("inserisci un numero tra 1 e 5"));
 console.log(userNumber)
 while(isNaN(userNumber)||userNumber<=0||userNumber>5){
