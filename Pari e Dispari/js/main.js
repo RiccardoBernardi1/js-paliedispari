@@ -11,16 +11,26 @@ function getRndInteger(min, max) {
 }
 function evenOrOdd(num){
     if (num%2===0){
-        return "pari"
+        return "pari";
     }else {
-        return "dispari"
+        return "dispari";
     }
 }
+
 // MAIN  
-const userChoice=prompt("Scegli tra pari o dispari");
+let userChoice=prompt("Scegli tra pari o dispari");
 console.log(userChoice)
-const userNumber=Number(prompt("inserisci un numero tra 1 e 5"));
+while (userChoice != "pari" || userChoice != "dispari"){
+    alert("Devi inserire una parola che sia 'pari' o 'dispari'");
+    userChoice=prompt("Scegli tra pari o dispari");
+    console.log(userChoice)
+}
+let userNumber=Number(prompt("inserisci un numero tra 1 e 5"));
 console.log(userNumber)
+while(isNaN(userNumber)||userNumber<=0||userNumber>5){
+    alert("Devi inserire un numero valido");
+    userNumber=Number(prompt("inserisci un numero tra 1 e 5"));
+}
 const cpuNumber=getRndInteger(1, 5);
 console.log(cpuNumber)
 const sum=userNumber + cpuNumber;
